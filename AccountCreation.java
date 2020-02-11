@@ -11,12 +11,11 @@ public class AccountCreation {
 	 */
 	public void instructions()
 	{
-	
-		System.out.println("enter a passwor that contains:");
-		System.out.println("between 8 and 15 characters");
-		System.out.println("At least 1 special character: !@#$%");
-		System.out.println("Cannot contain the word \"password\" in any case");
-		System.out.println("contains no spaces");
+		System.out.println("Please Enter Your Password: "
+				+ "\n\tPassword must contain 8-16 characters "
+				+ "\n\tPassword must contain at least 1 Uppercase Letter and 1 Special Character (\"!,@,#,$,%\") "
+				+ "\n\tPassword cannot contain \"password\" "
+				+ "\n\tPassword also cannot contain any spaces\n");
 	}
 	
 	
@@ -103,7 +102,7 @@ public class AccountCreation {
 		
 		if(!verify)
 
-			System.out.println("Your password can not have space");
+			System.out.println("Your password can not have spaces");
 			
 		
 		return verify;
@@ -150,7 +149,7 @@ public class AccountCreation {
 			if(password.toLowerCase().contains(str))
 			{
 				//verify = true;
-				System.out.println("contains the word pasword");
+				System.out.println("Contains the word pasword");
 				return true;
 			}
 			//if(verify)
@@ -184,6 +183,7 @@ public class AccountCreation {
 		public int asciiConverter()
 		{
 			System.out.print("the hash is: ");
+			
 			for(int i = 0; i < password.length(); i++)
 			{
 			
@@ -195,9 +195,9 @@ public class AccountCreation {
 				System.out.print(newPassword);
 				
 			
-		}
-		return 0;
+			}
+			return 0;
 	
 
-}
+		}
 }
