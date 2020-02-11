@@ -21,17 +21,21 @@ public class AccountMain {
 		{
 			case "1":
 					AccountCreation pass = new AccountCreation();
+					
 					pass.inputUserName();
 					pass.instructions();
 					pass.inputPassword();
 					pass.passwordCheck();
 					pass.asciiConverter();
+					System.out.println();
+					
+					String newAccount = pass.username + ", " + pass.password + ", " + pass.hashCode();
 					
 					CSVEditor c = new CSVEditor();
-					c.openFile();
-					c.addRecords(pass.username, pass.password, pass.hashCode());
-					c.closeFile();
-					
+					c.openFile(newAccount);
+					//c.addRecords(pass.username, pass.password, pass.hashCode());
+					//c.closeFile();
+					System.out.println(newAccount);
 				break;
 			
 			case "2":
